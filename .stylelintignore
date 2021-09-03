@@ -1,0 +1,8 @@
+**/dist/**
+**/node_modules/**
+**/build/**
+**/apis/**
+*.min.css
+*.cjs
+*.json
+*.txt
