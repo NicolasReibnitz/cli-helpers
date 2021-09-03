@@ -2,7 +2,8 @@
 import meow from 'meow';
 import cliHelpers from './index.js';
 
-const cli = meow(`
+const cli = meow(
+	`
 	Usage
 	  $ cli-helpers [input]
 
@@ -14,12 +15,14 @@ const cli = meow(`
 	  unicorns & rainbows
 	  $ cli-helpers ponies
 	  ponies & rainbows
-`, {
-	flags: {
-		foo: {
-			type: 'boolean'
+`,
+	{
+		flags: {
+			foo: {
+				type: 'boolean'
+			}
 		}
 	}
-});
+);
 
 console.log(cliHelpers(cli.input[0] || 'unicorns'));

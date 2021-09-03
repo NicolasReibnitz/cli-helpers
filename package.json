@@ -49,5 +49,11 @@
 	"browser": {
 		"child_process": false
 	},
-	"source": "src/index.js"
+	"source": "src/index.js",
+	"xo": {
+		"ignores": [
+			"examples/sections/**"
+		],
+		"prettier": true
+	}
 }

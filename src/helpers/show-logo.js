@@ -1,5 +1,3 @@
-import pad from 'pad-component';
-
 const logo = `[38;5;0m               [38;5;233m [38;5;235m.[38;5;237m..[38;5;238m''[38;5;237m.[38;5;236m.[38;5;235m.[38;5;233m [38;5;0m               [0;0m
 [38;5;0m          [38;5;232m [38;5;238m'[38;5;8mo[38;5;249m0[38;5;253mW[38;5;15mMMMMMMMMMM[38;5;253mW[38;5;249m0[38;5;8mo[38;5;238m'[38;5;232m    [38;5;0m       [0;0m
 [38;5;0m        [38;5;238m'[38;5;248mO[38;5;255mM[38;5;15mMMMMMMMMMMMMMMMMMM[38;5;255mM[38;5;247mk[38;5;235m.   [38;5;0m     [0;0m
@@ -34,14 +32,19 @@ const logo = `[38;5;0m               [38;5;233m [38;5;235m.[38;5;237m..[38;
 
 `;
 
-function showLogo(lineLength) {
-	lineLength = lineLength || 80;
-
+/**
+ * Displays the ILY version of the simpleshow logo (aka the interactive logo), centered in a given line length.
+ *
+ * @param {number} lineLength The maximum length of the line, including text and whitespace. (default = 80)
+ *
+ * @returns {string} Returns the logo as a string.
+ */
+function showLogo(lineLength = 80) {
 	const logoWith = 40;
 	const padding = ' '.repeat((lineLength - logoWith) / 2);
 
 	const logoArray = logo.split('\n');
-	let logoPaddedArray = [];
+	const logoPaddedArray = [];
 
 	for (const line in logoArray) {
 		if (Object.hasOwnProperty.call(logoArray, line)) {

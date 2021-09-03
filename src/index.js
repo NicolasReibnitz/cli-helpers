@@ -27,7 +27,7 @@ class CliUtils {
 
 	async keyToContinue(message, cliWidth) {
 		cliWidth = cliWidth || this.cliWidth;
-		return await keyToContinueFn(message, cliWidth);
+		return keyToContinueFn(message, cliWidth);
 	}
 
 	showLogo(cliWidth) {

@@ -1,27 +1,30 @@
 import wrapAnsi from 'wrap-ansi';
-// import pad from 'pad-component';
+// Import pad from 'pad-component';
 import align from 'wide-align';
-// const stringWidth = require('string-width');
+// Const stringWidth = require('string-width');
 // const stringLength = require('string-length');
 
 /**
- * @param input
- * @param textLength
- * @param lineLength
+ * Outputs the input text, centered and wrapped over multiple lines if too long.
+ *
+ * @param {string} input The text to be shown.
+ * @param {number} textLength The maximum length of text per line. (default = 76)
+ * @param {number} lineLength The maximum length of the line, including text and whitespace. (default = 80)
+ *
+ * @returns {string} The centered text as string.
  */
-function centerText(input, textLength, lineLength) {
-	textLength = textLength || 76;
-	lineLength = lineLength || 80;
+function centerText(input, textLength = 76, lineLength = 80) {
 	const wrapped = wrapAnsi(input, textLength);
 	const wrappedArray = wrapped.split('\n');
-	let paddedArray = [];
+	const paddedArray = [];
 
 	for (const line in wrappedArray) {
 		if (Object.hasOwnProperty.call(wrappedArray, line)) {
 			paddedArray[line] = align.center(wrappedArray[line], lineLength);
 		}
 	}
-	// console.log('stringWidth', stringWidth(input));
+
+	// Console.log('stringWidth', stringWidth(input));
 	// console.log('stringLength', stringLength(input));
 	return paddedArray.join('\n');
 }
