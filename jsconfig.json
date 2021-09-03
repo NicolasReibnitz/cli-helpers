@@ -7,6 +7,6 @@
 	"include": ["src/**/*"],
 	"typeAcquisition": {
 		"include": ["jquery", "video.js", "reveal", "howler"],
-		"exclude": ["posthtml-render"]
+		"exclude": ["posthtml-render", "source-map-js"]
 	}
 }
