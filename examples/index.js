@@ -1,12 +1,12 @@
-import cliHelpers from '../src/index.js';
+import CliHelpers from '../dist/module.mjs';
 
 const cliWidth = 100;
+const cliHelpers = new CliHelpers(cliWidth);
 
 /**
  *  Examples for all the helpers included here.
  */
 async function examples() {
-	const cliHelpers = new cliHelpers(cliWidth);
 	cliHelpers.clearScreen();
 	console.log(
 		'\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╋╋━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n'

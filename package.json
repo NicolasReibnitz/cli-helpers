@@ -3,11 +3,18 @@
 	"version": "0.0.0",
 	"description": "A collection of wheels I don&#39;t want to reinvent over and over again anymore.",
 	"license": "MIT",
-	"repository": "DasLaboratory/cli-helpers",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/NicolasReibnitz/cli-helpers.git"
+	},
 	"author": {
 		"name": "Nicolas Reibnitz",
-		"email": "nicolas.reibnitz@simpleshow.com",
+		"email": "n.reibnitz@gmail.com",
 		"url": "https://daslaboratory.com"
+	},
+	"homepage": "https://github.com/NicolasReibnitz/cli-helpers#readme",
+	"bugs": {
+		"url": "https://github.com/NicolasReibnitz/cli-helpers/issues"
 	},
 	"main": "dist/main.cjs",
 	"module": "dist/module.mjs",
@@ -50,18 +57,35 @@
 	},
 	"devDependencies": {
 		"ava": "^3.15.0",
-		"child_process": "^1.0.2",
 		"parcel": "latest",
 		"xo": "^0.38.0"
 	},
-	"browser": {
-		"child_process": false
-	},
 	"source": "src/index.js",
+	"targets": {
+		"main": {
+			"context": "node",
+			"engines": {
+				"node": ">= 12"
+			},
+			"outputFormat": "commonjs",
+			"isLibrary": true
+		},
+		"module": {
+			"context": "node",
+			"engines": {
+				"node": ">= 12"
+			},
+			"outputFormat": "esmodule",
+			"isLibrary": true
+		}
+	},
 	"xo": {
 		"ignores": [
 			"examples/sections/**"
 		],
-		"prettier": true
+		"prettier": true,
+		"rules": {
+			"capitalized-comments": "off"
+		}
 	}
 }

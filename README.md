@@ -13,10 +13,10 @@ npm install @das.laboratory/cli-helpers
 Start with instantiating the helpers and provide a width:
 
 ```js
-import cliHelpers from '@das.laboratory/cli-helpers';
+import CliHelpers from '@das.laboratory/cli-helpers';
 
 const cliWidth = 100;
-const cliHelpers = new cliHelpers(cliWidth);
+const cliHelpers = new CliHelpers(cliWidth);
 ```
 
 ## API
