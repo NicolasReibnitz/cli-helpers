@@ -8,7 +8,7 @@ test('title', t => {
 	// 	},
 	// 	{
 	// 		instanceOf: TypeError,
-	// 		message: "Class constructor CliUtils cannot be invoked without 'new'"
+	// 		message: "Class constructor cliHelpers cannot be invoked without 'new'"
 	// 	}
 	// );
 	// t.is(cliHelpers('unicorns'), 'unicorns & rainbows');

@@ -17,12 +17,19 @@
 	},
 	"scripts": {
 		"build": "parcel build",
+		"bump:major": "npm version major -f -m \"[v%s] $npm_config_message\"",
+		"bump:minor": "npm version minor -f -m \"[v%s] $npm_config_message\"",
+		"bump:patch": "npm version patch -f -m \"[v%s] $npm_config_message\"",
+		"postversion": "git push && git push --tags && npm publish",
+		"preversion": "git add .",
 		"test": "xo && ava",
+		"version": "git add .",
 		"watch": "parcel watch"
 	},
 	"files": [
 		"dist/main.cjs",
-		"dist/module.mjs"
+		"dist/module.mjs",
+		"src/"
 	],
 	"keywords": [
 		""

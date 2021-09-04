@@ -1,4 +1,4 @@
-import CliUtils from '../src/index.js';
+import cliHelpers from '../src/index.js';
 
 const cliWidth = 100;
 
@@ -6,26 +6,42 @@ const cliWidth = 100;
  *  Examples for all the helpers included here.
  */
 async function examples() {
-	const cliUtils = new CliUtils(cliWidth);
-	cliUtils.clearScreen();
-	console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╋╋━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
-
-	console.log(cliUtils.header("I'm the header! I'm " + cliWidth + ' chars wide (80 by default)!'));
-	console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╋╋━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
-	console.log(cliUtils.showLogo());
-
-	console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╋╋━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
+	const cliHelpers = new cliHelpers(cliWidth);
+	cliHelpers.clearScreen();
 	console.log(
-		cliUtils.centerText(
-			'Join our community and get help with React, React Native, and all web technologies. Even recommend tutorials, and content you want to see.'
+		'\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╋╋━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n'
+	);
+
+	console.log(cliHelpers.header("I'm the header! I'm " + cliWidth + ' chars wide (80 by default)!'));
+	console.log(
+		'\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╋╋━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n'
+	);
+	console.log(cliHelpers.showLogo());
+
+	console.log(
+		'\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╋╋━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n'
+	);
+	console.log(
+		cliHelpers.centerText(
+			"Our competitors are jumping the shark, can you send me an invite?. Land the plane if you want to motivate these clowns. Try less carrot and more stick by moving the needle for high-performance keywords or game plans. Closing these latest prospects is like putting socks on an octopus. Identify pain points, and let's not solutionize this right now. Just parking-lot this for on-brand but wholly fresh ideas and overcome key issues to meet critical milestones. Circle back so ladder up / ladder back to the strategy."
 		)
 	);
 
-	console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╋╋━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
-	await cliUtils.keyToContinue('Press any key to continue...');
-	cliUtils.softClear();
-	cliUtils.showMessage("I'm 'showMessage()'!");
-	console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╋╋━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
+	console.log(
+		'\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╋╋━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n'
+	);
+	cliHelpers.showMessage("Let's put a pin in that pre launch throughput!");
+	console.log(
+		'\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╋╋━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n'
+	);
+	await cliHelpers.keyToContinue('Press any key to continue...');
+	console.log(
+		'\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╋╋━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n'
+	);
+	cliHelpers.softClear();
+	console.log(
+		'\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╋╋━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n'
+	);
 }
 
 examples();

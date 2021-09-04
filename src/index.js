@@ -6,7 +6,7 @@ import showLogoFn from './helpers/show-logo.js';
 import showMessageFn from './helpers/show-message.js';
 import softClearFn from './helpers/soft-clear.js';
 
-class CliUtils {
+class cliHelpers {
 	constructor(cliWidth) {
 		this.cliWidth = cliWidth || 80;
 	}
@@ -45,4 +45,4 @@ class CliUtils {
 	}
 }
 
-export default CliUtils;
+export default cliHelpers;
