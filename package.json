@@ -1,6 +1,6 @@
 {
 	"name": "@das.laboratory/cli-helpers",
-	"version": "0.0.0",
+	"version": "1.0.0",
 	"description": "A collection of wheels I don&#39;t want to reinvent over and over again anymore.",
 	"license": "MIT",
 	"repository": {
