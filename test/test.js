@@ -4,7 +4,7 @@ import test from 'ava';
 // const cliWidth = 100;
 // const cliHelpers = new CliHelpers(cliWidth);
 
-test('title', t => {
+test('dummy test', t => {
 	// T.throws(
 	// 	() => {
 	// 		cliHelpers(123);

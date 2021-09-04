@@ -1,6 +1,6 @@
 {
 	"name": "@das.laboratory/cli-helpers",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "A collection of wheels I don&#39;t want to reinvent over and over again anymore.",
 	"license": "MIT",
 	"repository": {
@@ -29,7 +29,7 @@
 		"bump:patch": "npm version patch -f -m \"[v%s] $npm_config_message\"",
 		"postversion": "git push && git push --tags && npm publish",
 		"preversion": "git add .",
-		"test": "xo && ava",
+		"test": "xo && ava --verbose",
 		"version": "git add .",
 		"watch": "parcel watch"
 	},
