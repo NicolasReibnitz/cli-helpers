@@ -185,16 +185,20 @@ This library uses [Parcel 2](https://github.com/parcel-bundler/parcel) for bundl
 ###### Watch
 
 ```bash
-npm start			# or
-npm run watch		# or
-npm run dev			# or
+npm start
+# or
+npm run watch
+# or
+npm run dev
+# or
 npx parcel watch
 ```
 
 ###### Build
 
 ```bash
-npm run build		# or
+npm run build
+# or
 npx parcel build
 ```
 
