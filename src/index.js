@@ -46,3 +46,11 @@ class cliHelpers {
 }
 
 export default cliHelpers;
+
+export const centerText = centerTextFn;
+export const clearScreen = clearScreenFn;
+export const header = headerFn;
+export const keyToContinue = keyToContinueFn;
+export const showLogo = showLogoFn;
+export const showMessage = showMessageFn;
+export const softClear = softClearFn;

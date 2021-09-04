@@ -10,14 +10,27 @@ npm install @das.laboratory/cli-helpers
 
 ## Usage
 
-Start with instantiating the helpers and provide a width:
+Start with instantiating the helpers and provide a width. Then use the included helpers.
 
 ```js
 import CliHelpers from '@das.laboratory/cli-helpers';
 
 const cliWidth = 100;
 const cliHelpers = new CliHelpers(cliWidth);
+
+cliHelpers.showMessage("Let's put a pin in that pre launch throughput!", 76);
 ```
+
+Or import individual helpers without configuring the default width:
+
+```js
+import { clearScreen, showMessage } from '@das.laboratory/cli-helpers';
+
+clearScreen();
+showMessage("Let's put a pin in that pre launch throughput!", 76, 100);
+```
+
+Checkout the [examples](./examples/index.js) file for more... uhm... examples.
 
 ## API
 
