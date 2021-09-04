@@ -1,6 +1,6 @@
 {
 	"name": "@das.laboratory/cli-helpers",
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"description": "A collection of wheels I don&#39;t want to reinvent over and over again anymore.",
 	"license": "MIT",
 	"repository": {
@@ -27,6 +27,7 @@
 		"bump:major": "npm version major -f -m \"[v%s] $npm_config_message\"",
 		"bump:minor": "npm version minor -f -m \"[v%s] $npm_config_message\"",
 		"bump:patch": "npm version patch -f -m \"[v%s] $npm_config_message\"",
+		"postinstall": "patch-package",
 		"postversion": "git push && git push --tags && npm publish",
 		"preversion": "git add .",
 		"test": "xo && ava --verbose",
@@ -50,6 +51,7 @@
 		"del": "^6.0.0",
 		"meow": "^10.1.1",
 		"pad-component": "^0.0.1",
+		"patch-package": "^6.4.7",
 		"press-any-key": "^0.1.1",
 		"sync-rpc": "^1.3.6",
 		"wide-align": "^1.1.3",
